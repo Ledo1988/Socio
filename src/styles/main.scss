@@ -1,0 +1,63 @@
+@import "vendor/libs";
+
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "base/fonts";
+
+@import "base/base";
+@import "base/typography";
+@import "base/form_elements";
+@import "base/btns";
+@import "base/container";
+
+@import "components/components";
+
+body {
+  font-family: $font-primary;
+  font-size: 14px;
+}
+
+
+.app {
+
+  &--wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+            "header header"
+            "nav main";
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
+    grid-gap: 10px;
+  }
+}
+
+.header {
+  grid-area: header;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.main {
+  grid-area: main;
+
+  &__img {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+main {
+
+}

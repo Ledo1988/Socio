@@ -1,0 +1,27 @@
+$path: '/fonts/';
+
+@font-face {
+  font-family: "dashicons";
+  font-style: normal;
+  font-weight: 400;
+  src: url($path + 'dashicons.eot') format("eot"),
+       url($path + 'dashicons.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "ProximaNova-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url($path + 'ProximaNova-Regular.eot') format("eot"),
+       url($path + 'ProximaNova-Regular.woff') format("woff"),
+       url($path + 'ProximaNova-Regular.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "ProximaNova-Regular";
+  font-style: normal;
+  font-weight: 700;
+  src: url($path + 'ProximaNova-Bold.eot') format("eot"),
+  url($path + 'ProximaNova-Bold.woff') format("woff"),
+  url($path + 'ProximaNova-Bold.ttf') format("truetype");
+}
