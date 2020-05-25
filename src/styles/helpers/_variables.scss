@@ -1,42 +1,25 @@
 //Media
-$hd: 1504px;
-$xl: 1280px;
-$l: 992px;
+$hd: 1920px;
+$xl: 1440px;
+$l: 1280px;
+$tablet: 1024px;
 $md: 768px;
+$sm: 576px;
 $s: 320px;
 
 //Colors
 $color-black: #000000;
 $color-white: #ffffff;
 
-$color-primary: #222222;
+$color-primary: #2f2f2f;
+$color-secondary: #00a2f2;
 
-$color-razzmatazz: #F21F5B;
-$color-crimson: #d20c44;
-
-$color-selago: #F7F9FE;
-$color-iron: #D4D6D7;
-$color-silverSand: #C1C3C4;
-$color-doveGray: #6A6A6A;
-
-$color-royalBlue: #3951E7;
-$color-astronaut: #232473;
-$color-governorBay: #2E2FB2;
-$color-bunting: #1A1B57;
-
-$color-red: #9F210C;
 //Fonts
 $font-primary: "Proxima-Regular", sans-serif;
-$font-secondary: "dashicons", sans-serif;
+$font-secondary: "Dashicons", sans-serif;
 
 //Grid
 $grid-unit: 8px;
-$col-hd-extra: $grid-unit*13;
-$col-hd: $grid-unit*11;
-$col-xl: $grid-unit*9;
-$col-l: $grid-unit*6;
-$col-md: $grid-unit*10;
-$col-s: $grid-unit*6;
 
 //Animation
 $transition: .2s ease-in-out;

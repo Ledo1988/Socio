@@ -43,11 +43,11 @@ input[type='checkbox'] {
 input,
 textarea {
     font: 14px $font-primary;
-    color: $color-black;
+    color: $color-primary;
 
     &::placeholder {
         font: 14px $font-primary;
-        color: $color-silverSand;
+        color: $color-black;
     }
 }
 
@@ -64,21 +64,25 @@ label {
 //Fast-fix ENDs
 
 input {
-    font-size: 14px;
-    line-height: 19px;
+    padding: $grid-unit*3 14px $grid-unit*3 8px;
+    border: 1px solid $color-primary;
+    border-radius: 3px;
+    font-size: 16px;
     color: $color-primary;
-    padding: 10px $grid-unit*2 10px $grid-unit*2;
-    background: #FFFFFF;
-    border: 1px solid $color-iron;
-    border-radius: 2px;
+    background: $color-white;
     transition: $transition;
+    cursor: auto;
 
     &::placeholder {
-        color: $color-iron;
+        color: $color-primary;
     }
 
     &:active, &:focus, &:hover {
         outline: none;
+    }
+
+    &::-ms-clear {
+        display: none;
     }
 }
 
@@ -91,40 +95,31 @@ input {
 
     label {
         display: block;
+        margin-bottom: $grid-unit;
         font-family: $font-secondary;
-        font-weight: 600;
+        font-weight: 700;
         font-size: 14px;
         line-height: $grid-unit*3;
-        margin-bottom: $grid-unit;
-
-        &.input__label--required {
-
-            &:after {
-                content: ' *';
-                color: $color-red;
-            }
-        }
+        cursor: auto;
     }
 }
 
 textarea {
     display: block;
+    padding: 10px $grid-unit*2 10px $grid-unit*2;
+    border: 1px solid $color-primary;
+    border-radius: 2px;
     width: 100%;
     height: 100px;
     font-size: 14px;
     line-height: 19px;
     color: $color-primary;
-    padding: 10px $grid-unit*2 10px $grid-unit*2;
     background: #FFFFFF;
-    border: 1px solid $color-iron;
-    border-radius: 2px;
     transition: $transition;
 
     &::placeholder {
-        color: $color-iron;
+        color: $color-primary;
     }
-
-
 }
 
 .textarea--wrapper {
@@ -132,25 +127,10 @@ textarea {
 
     label {
         display: block;
+        margin-bottom: $grid-unit;
         font-family: $font-secondary;
-        font-weight: 600;
+        font-weight: 700;
         font-size: 14px;
         line-height: $grid-unit*3;
-        margin-bottom: $grid-unit;
-    }
-}
-
-
-.close-link {
-    position: absolute;
-    display: block;
-    width: $grid-unit*2;
-    height: $grid-unit*2;
-    font-size: 0;
-    transition: $transition;
-    cursor: pointer;
-
-    svg.icon {
-        fill: $color-black;
     }
 }
