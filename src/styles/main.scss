@@ -1,21 +1,7 @@
 @import "vendor/libs";
-
 @import "base/fonts";
-
+@import "fontello/css/fontello.css";
 @import "base/base";
-@import "base/typography";
-@import "base/form_elements";
-@import "base/btns";
-
-.app {
-    /* display: grid;
-    width: 100%;
-    grid-template-areas: "header header" "nav main";
-    grid-template-rows: 60px 1fr;
-    grid-template-columns: 2fr 10fr;
-    grid-gap: 10px;*/
-}
-
 
 .main {
     grid-area: main;

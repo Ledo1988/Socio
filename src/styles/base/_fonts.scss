@@ -17,9 +17,11 @@ $path: '/fonts/';
 }
 
 @font-face {
-  font-family: "Dashicons";
+  font-family: "fontello";
+  src: url($path + 'fontello.woff2') format("woff2"),
+  url($path + 'fontello.woff') format("woff");
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400;
-  src: url($path + 'dashicons.ttf') format("truetype");
 }
+
 

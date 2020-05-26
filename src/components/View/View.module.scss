@@ -1,0 +1,9 @@
+.viewWrapper {
+  @include container;
+  display: grid;
+  width: 100%;
+  grid-template-areas: "main" "sidebar";
+  grid-template-rows: 1fr;
+  grid-template-columns: 8fr 4fr;
+  grid-gap: 10px;
+}

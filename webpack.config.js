@@ -18,7 +18,27 @@ module.exports = {
 				use: 'babel-loader',
 			},
 			{
-				test: /(\.css|\.sass|\.scss)$/,
+				test: /^(?!.*?\.module).*\.(css|sass|scss)$/,
+				use: [
+					{
+						loader: require.resolve('style-loader'),
+					},
+					{
+						loader: require.resolve('css-loader'),
+					},
+					{
+						loader: require.resolve('sass-loader'),
+					},
+					{
+						loader: 'sass-resources-loader',
+						options: {
+							resources: ['src/styles/helpers/_variables.scss', 'src/styles/helpers/_mixins.scss']
+						},
+					},
+				],
+			},
+			{
+				test: /\.module\.(css|sass|scss)$/,
 				use: [
 					{
 						loader: require.resolve('style-loader'),
@@ -26,7 +46,6 @@ module.exports = {
 					{
 						loader: require.resolve('css-loader'),
 						options: {
-							importLoaders: 1,
 							modules: {
 								localIdentName: "[name]__[local]___[hash:base64:5]",
 							},
@@ -49,17 +68,18 @@ module.exports = {
 					loader: 'url-loader',
 					options: {
 						limit: 8000, // Convert images < 8kb to base64 strings
-						name: 'images/[hash]-[name].[ext]'
+						name: 'images/[name].[ext]'
 					}
 				}]
 			},
-
 			{
-				test: /\.(eot|ttf|woff|woff2|otf)$/,
-				use: [{
-					loader: 'file-loader',
-					options: { name: 'public/fonts/[name].[ext]' },
-				}],
+				test: /\.(woff|woff2|eot|ttf|svg)(\?.*$|$)/,
+				use: {
+					loader: "file-loader",
+					options: {
+						name: "fonts/[name].[ext]",
+					},
+				},
 			},
 
 			{
