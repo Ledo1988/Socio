@@ -1,0 +1,31 @@
+.dialog {
+  display: grid;
+  grid-template-areas: "title title" "dialog messages";
+  grid-auto-flow: dense;
+  grid-template-columns: 6fr 6fr;
+  grid-gap: 0 $grid-unit*3;
+
+  &Title {
+    grid-area: title;
+  }
+
+  &List {
+    grid-area: dialog;
+  }
+
+  &Item {
+
+    &.active {
+      color: gold;
+    }
+
+  }
+}
+
+.messages {
+  grid-area: messages;
+
+  &Item {
+
+  }
+}

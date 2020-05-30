@@ -1,0 +1,17 @@
+.personal {
+  border-left: 1px solid $color-grey;
+  padding-left: $grid-unit*7;
+  margin-top: $grid-unit*-3;
+  padding-top: $grid-unit*3;
+  grid-area: sidebar;
+}
+
+.name {
+  font-weight: 700;
+  margin-bottom: $grid-unit*3;
+}
+
+.detailsItem {
+  font-size: 16px;
+  padding-bottom: $grid-unit;
+}

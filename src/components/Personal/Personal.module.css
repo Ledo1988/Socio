@@ -1,24 +1,22 @@
 /*
-Error: Undefined variable: "$font-primary".
-        on line 21 of base/_base.scss
-        from line 4 of main.scss
+Error: Undefined variable: "$color-grey".
+        on line 2 of Personal.module.scss
 
-16: .content {
-17:     padding: $grid-unit*2 0;
-18: }
-19: 
-20: .main__img {
-21:     width: 100%;
-22:     height: 250px;
-23:     display: flex;
-24:     align-items: center;
-25:     justify-content: center;
-26:     overflow: hidden;
+1: .personal {
+2:   border-left: 1px solid $color-grey;
+3:   padding-left: $grid-unit*7;
+4:   margin-top: $grid-unit*-3;
+5:   padding-top: $grid-unit*3;
+6:   grid-area: sidebar;
+7: }
 
 Backtrace:
-base/_base.scss:21
-main.scss:4
+Personal.module.scss:2
 C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/list_literal.rb:75:in `map'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/list_literal.rb:75:in `_perform'
 C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:398:in `visit_prop'
 C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
@@ -32,19 +30,6 @@ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform
 C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
 C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
 C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:325:in `block (2 levels) in visit_import'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:325:in `map'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:325:in `block in visit_import'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
 C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
 C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
@@ -77,4 +62,4 @@ C:/Ruby26-x64/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$font-primary\".\A         on line 21 of base/_base.scss\A         from line 4 of main.scss\A \A 16: .content {\A 17:     padding: $grid-unit*2 0;\A 18: }\A 19: \A 20: .main__img {\A 21:     width: 100%;\A 22:     height: 250px;\A 23:     display: flex;\A 24:     align-items: center;\A 25:     justify-content: center;\A 26:     overflow: hidden;"; }
+  content: "Error: Undefined variable: \"$color-grey\".\A         on line 2 of Personal.module.scss\A \A 1: .personal {\A 2:   border-left: 1px solid $color-grey;\A 3:   padding-left: $grid-unit*7;\A 4:   margin-top: $grid-unit*-3;\A 5:   padding-top: $grid-unit*3;\A 6:   grid-area: sidebar;\A 7: }"; }

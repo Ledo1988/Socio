@@ -3,8 +3,18 @@
 @import "fontello/css/fontello.css";
 @import "base/base";
 
-.main {
-    grid-area: main;
+.view {
+    @include container;
+    display: grid;
+    width: 100%;
+    grid-template-areas: "menu sidebar" "main sidebar";
+    grid-auto-flow: dense;
+    grid-template-columns: 8fr 4fr;
+    grid-gap: 0 $grid-unit*7;
+}
+
+.content {
+    padding: $grid-unit*2 0;
 }
 
 .main__img {
