@@ -11,7 +11,9 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 
-const App = () => {
+const App = (props) => {
+
+
 	return (
 		<BrowserRouter>
 			<div className="app">
@@ -22,8 +24,8 @@ const App = () => {
 						<Menu/>
 						<Personal/>
 						<div className="view__content content">
-							<Route path="/profile" component={MyPosts}/>
-							<Route path="/dialogs" component={Dialogs}/>
+							<Route path="/profile" render={ () => <MyPosts postData={props.postData}/>}/>
+							<Route path="/dialogs" render={ () => <Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData}/>}/>
 							<Route path="/news" component={News}/>
 							<Route path="/music" component={Music}/>
 							<Route path="/settings" component={Settings}/>
