@@ -10,6 +10,7 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
+import {addPost} from "./redux/state";
 
 const App = (props) => {
 
@@ -22,10 +23,10 @@ const App = (props) => {
 					<Intro/>
 					<div className="main__view view ">
 						<Menu/>
-						<Personal/>
+						<Personal state={props.state.mainPage}/>
 						<div className="view__content content">
-							<Route path="/profile" render={ () => <MyPosts postData={props.postData}/>}/>
-							<Route path="/dialogs" render={ () => <Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData}/>}/>
+							<Route path="/profile" render={ () => <MyPosts profilePage={props.state.profilePage.posts} updateNewPost={props.updateNewPost} addPost={props.addPost}/>}/>
+							<Route path="/dialogs" render={ () => <Dialogs state={props.state.dialogsPage}/>}/>
 							<Route path="/news" component={News}/>
 							<Route path="/music" component={Music}/>
 							<Route path="/settings" component={Settings}/>

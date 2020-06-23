@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA,QAAS;EACP,OAAO,EAAE,IAAI",
-"sources": ["DialoItems.module.scss"],
+"mappings": "AAAA,QAAS;EACP,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,UAAU;EAM3B,WAAK;IACH,KAAK,EAAE,IAAI;IACX,MAAM,EAAE,IAAI",
+"sources": ["Message.module.scss"],
 "names": [],
-"file": "DialoItems.module.css"
+"file": "Message.module.css"
 }

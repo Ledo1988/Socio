@@ -14,9 +14,11 @@
   }
 
   &Item {
+    padding: $grid-unit*2 0;
+    border-bottom: 1px solid #e5e5e5;
 
-    &.active {
-      color: gold;
+    &.active a {
+      color: $color-secondary;
     }
 
   }

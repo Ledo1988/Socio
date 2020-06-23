@@ -1,31 +1,46 @@
-.dialog {
-  display: grid;
-  grid-template-areas: "title title" "dialog messages";
-  grid-auto-flow: dense;
-  grid-template-columns: 6fr 6fr;
-  grid-gap: 0 $grid-unit*3;
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+  margin-bottom: $grid-unit*4;
+
+  &Me {
+    .messageImg {
+      border-color: $color-grey;
+    }
+  }
 
   &Title {
-    grid-area: title;
+    position: absolute;
+    bottom: $grid-unit*-2;
+    left: 0;
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
   }
 
-  &List {
-    grid-area: dialog;
+  &Name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: $grid-unit;
+    position: relative;
+
+
   }
 
-  &Item {
-
-    &.active {
-      color: gold;
-    }
-
+  &Img {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    border: 2px solid #00a2f2;
+    padding: 8px;
+    overflow: hidden;
   }
-}
 
-.messages {
-  grid-area: messages;
-
-  &Item {
-
+  &Text {
+    font-size: 16px;
   }
 }
