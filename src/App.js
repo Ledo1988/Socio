@@ -24,7 +24,7 @@ const App = (props) => {
 						<Menu/>
 						<Personal state={props.state.mainPage}/>
 						<div className="view__content content">
-							<Route path="/profile" render={ () => <MyPosts profilePage={props.state.profilePage.posts} updateNewPost={props.updateNewPost} addPost={props.addPost}/>}/>
+							<Route path="/profile" render={ () => <MyPosts profilePage={props.state.profilePage.posts} dispatch={props.dispatch}/>}/>
 							<Route path="/dialogs" render={ () => <Dialogs state={props.state.dialogsPage}/>}/>
 							<Route path="/news" component={News}/>
 							<Route path="/music" component={Music}/>
