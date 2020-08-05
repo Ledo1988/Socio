@@ -4,9 +4,7 @@ import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import {
 	addDialogActionCreator,
-	addPostActionCreator,
 	updateNewDialogTextActionCreator,
-	updateNewPostTextActionCreator
 } from "../../redux/state";
 
 const Dialogs = (props) => {
@@ -17,14 +15,15 @@ const Dialogs = (props) => {
 	let messagesElements = props.state.messages
 		.map( message => <Message message={message.message} name={message.name}/>);
 
-	let newDialogElement = React.createRef();
+	//let newDialogElement = React.createRef();
+	let newDialogElement = props.state.newMessageText;
 
 	let addMessage = () => {
 		props.dispatch(addDialogActionCreator());
 	}
 
-	let onDialogChange = () => {
-		let text = newDialogElement.current.value;
+	let onDialogChange = (e) => {
+		let text = e.target.value;
 		props.dispatch(updateNewDialogTextActionCreator(text));
 	}
 
@@ -40,7 +39,7 @@ const Dialogs = (props) => {
 				</ul>
 				<div className={s.dialogNew}>
 					<div>
-						<textarea ref={newDialogElement} onChange={onDialogChange}></textarea>
+						<textarea value={newDialogElement} onChange={onDialogChange}></textarea>
 						<button onClick={addMessage}>Add Message</button>
 					</div>
 				</div>
