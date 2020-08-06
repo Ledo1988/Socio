@@ -1,7 +1,6 @@
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-const ADD_POST_DIALOG = 'ADD-POST-DIALOG';
-const UPDATE_NEW_POST_TEXT_DIALOG = 'UPDATE-NEW-POST-TEXT-DIALOG';
+import dialogsReducer from '../redux/dialogs-reducer';
+import profileReducer from '../redux/profile-reducer';
+import sidebarReducer from '../redux/sidebar-reducer';
 
 let store = {
 	_state: {
@@ -22,7 +21,6 @@ let store = {
 			],
 			newPostText: 'it-post',
 		},
-
 		dialogsPage: {
 			dialogs: [
 				{id: 1, name: 'Sasha'},
@@ -46,36 +44,12 @@ let store = {
 	},
 	subscribe(observer) {this._callSubscriber = observer;},
 
-	dispatch(action) {
-		if (action.type === ADD_POST) {
-			let newPost = {
-				id: 5,
-				message: this._state.profilePage.newPostText,
-				likesCount: 0,
-			};
+	dispatch: function (action) {
+		this._state.profilePage = profileReducer(this._state.profilePage, action);
+		this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+		this._state.sidebar = sidebarReducer(this._state.sidebar, action);
 
-			this._state.profilePage.posts.push(newPost);
-			this._state.profilePage.newPostText = '';
-			this._callSubscriber(this._state);
-		} else if (action.type === UPDATE_NEW_POST_TEXT) {
-			this._state.profilePage.newPostText = action.newText;
-			this._callSubscriber(this._state);
-		} else if (action.type === ADD_POST_DIALOG) {
-			let newMessage = {
-				id: 5,
-				name: 'Me',
-				message: this._state.dialogsPage.newMessageText,
-				likesCount: 0,
-			};
-
-			this._state.dialogsPage.messages.push(newMessage);
-			this._state.dialogsPage.newMessageText = '';
-			this._callSubscriber(this._state);
-		} else if (action.type === UPDATE_NEW_POST_TEXT_DIALOG) {
-			this._state.dialogsPage.newMessageText = action.newMessage;
-			this._callSubscriber(this._state);
-		}
-
+		this._callSubscriber(this._state);
 	},
 }
 
