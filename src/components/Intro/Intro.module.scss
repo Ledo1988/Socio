@@ -1,0 +1,69 @@
+.header {
+  position: relative;
+  @include container-fluid;
+  margin-bottom: $grid-unit*3;
+}
+
+.img {
+  position: relative;
+  font-size: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.linkWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.link {
+  display: block;
+
+  &:hover {
+    .profileImg {
+      border: 6px solid rgba(255,255,255,0.3);
+    }
+  }
+}
+
+.profileImg {
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  box-shadow: none;
+  border: 6px solid rgba(255,255,255,0.2);
+  transition: $transition;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  }
+}
+
+.profileName {
+  color: $color-white;
+  text-align: center;
+  margin-top: $grid-unit;
+}
+

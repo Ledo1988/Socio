@@ -1,0 +1,15 @@
+.link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+
+.img {
+  width: 50px;
+  height: auto; }
+
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  margin-left: 8px; }
+
+/*# sourceMappingURL=Logo.module.css.map */

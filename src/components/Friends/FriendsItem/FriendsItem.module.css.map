@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEE,YAAO;EACL,WAAW,EAAE,GAAG;EAChB,aAAa,EAAE,IAAI",
+"sources": ["FriendsItem.module.scss"],
+"names": [],
+"file": "FriendsItem.module.css"
+}

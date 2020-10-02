@@ -1,0 +1,92 @@
+.menu {
+  grid-area: menu;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: $grid-unit*2;
+  border-bottom: 1px solid $color-grey;
+
+  &Link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    padding: $grid-unit $grid-unit*2;
+
+    &:hover, &Active {
+      &:before {
+        opacity: 1;
+      }
+
+      .listTitle {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      content: '';
+      font-family: $font-secondary;
+      font-style: normal;
+      font-weight: normal;
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-bottom: $grid-unit;
+      text-align: center;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      opacity: 0.9;
+      transition: $transition;
+    }
+  }
+
+  &Title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    opacity: 0.7;
+    transition: $transition;
+  }
+
+  &Item {
+    margin-right: $grid-unit*2;
+
+    &Profile {
+      .listLink:before {
+        content: "\e800";
+      }
+    }
+
+    &Messages {
+      .listLink:before {
+        content: "\e801";
+      }
+    }
+
+    &News {
+      .listLink:before {
+        content: "\e806";
+      }
+    }
+
+    &Music {
+      .listLink:before {
+        content: "\e803";
+      }
+    }
+
+    &Settings {
+      .listLink:before {
+        content: "\e80a";
+      }
+    }
+  }
+}
