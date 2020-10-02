@@ -53,17 +53,5 @@ let store = {
 	},
 }
 
-export const addPostActionCreator = () => ({type: 'ADD-POST'});
-
-export const updateNewPostTextActionCreator = (text) => ({
-		type: 'UPDATE-NEW-POST-TEXT',
-		newText: text,})
-
-export const addDialogActionCreator = () => ({type: 'ADD-POST-DIALOG'});
-
-export const updateNewDialogTextActionCreator = (text) => ({
-	type: 'UPDATE-NEW-POST-TEXT-DIALOG',
-	newMessage: text,})
-
 export default store;
 window.store = store;
