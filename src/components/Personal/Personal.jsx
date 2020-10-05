@@ -7,7 +7,7 @@ const Personal = (props) => {
 	return (
 		<section className={s.personal}>
 			<PersonalInfo/>
-			<Friends friends={props.state}/>
+			<Friends friends={props.state.friends}/>
 		</section>
 	)
 }

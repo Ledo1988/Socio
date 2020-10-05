@@ -21,7 +21,7 @@ const App = (props) => {
 					<Intro/>
 					<div className="main__view view ">
 						<Menu/>
-						<Personal state={props.state.mainPage.friends}/>
+						<Personal state={props.state.mainPage}/>
 						<div className="view__content content">
 							<Route path="/profile" render={ () => <MyPosts profilePage={props.state.profilePage.posts} dispatch={props.dispatch}/>}/>
 							<Route path="/dialogs" render={ () => <Dialogs state={props.state.dialogsPage} dispatch={props.dispatch}/>}/>
